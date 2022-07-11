@@ -25,8 +25,8 @@ const Vehiculo=new Schema({
     },
     total_pago:{
         type:Number,
-        required:true
+        required:false
     }
 })
 
-export const modeloAdministrador=mongoose.model('administradores',Administrador)
+export const modeloVehiculo=mongoose.model('vehiculos',Vehiculo)

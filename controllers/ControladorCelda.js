@@ -1,6 +1,6 @@
 import {ServicioCelda} from '../services/ServicioCelda.js'
 
-class ControladorCelda{
+export class ControladorCelda{
 
     constructor(){}
 

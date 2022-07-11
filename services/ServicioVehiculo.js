@@ -1,26 +1,26 @@
-import {modeloAdministrador} from '../models/modeloAdministrador.js'
+import {modeloVehiculo} from '../models/modeloVehiculo.js'
 
-export class ServicioAdministrador{
+export class ServicioVehiculo{
 
     constructor(){}
 
     async buscar(){
-        let administradores=await modeloAdministrador.find()
-        return administradores
+        let vehiculos=await modeloVehiculo.find()
+        return vehiculos
     }
 
-    async buscarPorId(idAdmin){
-        let administrador=await modeloAdministrador.findById(idAdmin)
-        return administrador
+    async buscarPorId(idVehiculo){
+        let vehiculo=await modeloVehiculo.findById(idVehiculo)
+        return vehiculo
     }
 
-    async editar(idAdmin,datoAdmin){
-        return await modeloAdministrador.findByIdAndUpdate(idAdmin,datoAdmin)
+    async editar(idVehiculo,datoVehiculo){
+        return await modeloVehiculo.findByIdAndUpdate(idVehiculo,datoVehiculo)
     }
 
-    async ingresar(infoAdmin){
-        let administradorARegistrar=new modeloAdministrador(infoAdmin)
-        return await administradorARegistrar.save()
+    async ingresar(infoVehiculo){
+        let vehiculoARegistrar=new modeloVehiculo(infoVehiculo)
+        return await vehiculoARegistrar.save()
     }
 
 
