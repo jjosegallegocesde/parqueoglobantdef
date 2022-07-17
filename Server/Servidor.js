@@ -16,7 +16,7 @@ export class Servidor {
 
     //ATRIBUTO app donde almaceno la funcionalidad de express 
        this.app = express()
-       //this.conectarconBD()
+       this.conectarconBD()
        this.llamarAuxiliares()
        this.atenderServicios()
 

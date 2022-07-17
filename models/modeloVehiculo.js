@@ -26,6 +26,10 @@ const Vehiculo=new Schema({
     total_pago:{
         type:Number,
         required:false
+    },
+    minutos:{
+        type:Number,
+        required:false
     }
 })
 

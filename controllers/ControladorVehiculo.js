@@ -1,7 +1,7 @@
 import {ServicioVehiculo} from '../services/ServicioVehiculo.js'
 import {ServicioCelda} from '../services/ServicioCelda.js'
 
-class ControladorVehiculo{
+export class ControladorVehiculo{
 
     constructor(){}
 
@@ -62,7 +62,8 @@ class ControladorVehiculo{
             //restar las 2 fechas y obtener la diferencia de tiempo en minutos
             let diferencia=fechaSalida.getTime()-fechaEntrada.getTime()
             let diferenciaEnSegundos=diferencia/1000
-            let diferenciaEnMinutos=diferenciaEnSegundos/60
+            let diferenciaEnMinutos=Math.round(diferenciaEnSegundos/60)
+            datos.minutos=diferenciaEnMinutos
 
             //calculamos el costo del parqueadero
             let costo=diferenciaEnMinutos*tarifa
