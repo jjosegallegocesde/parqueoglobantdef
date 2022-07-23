@@ -6,7 +6,7 @@ import express from 'express'
 import {rutas} from '../routes/rutas.js'
 
 //Importar la conexion con BD
-import{conectarABD} from '../dataBase/conexion.js'
+import{conectarABD} from '../dataBase/conexiones.js'
 
 import cors from 'cors'
 
