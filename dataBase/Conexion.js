@@ -9,7 +9,7 @@ export async function conectar(){
 
     }catch(error){
 
-        console.log("Error en la conexion con BD"+Error)
+        console.log("Error en la conexion con BD "+ error)
 
     }
 }
